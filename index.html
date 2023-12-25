@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam InfoTech</title>
+    <script src="./js/tailwindcss.js"></script>
+    <script src="./js/root.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="w-full px-[1.2dvw] py-[1.2dvw]">
+        <nav class="flex items-center justify-between w-full gap-[calc(0.2dvw+2px)] max-[698px]:items-center">
+            <div>
+                <img src="./img/mainlogo.png" class="w-[12dvw] max-[999px]:w-[24dvw] max-[490px]:w-[48dvw]">
+            </div>
+            <ul class="bg-white flex z-40 rounded-full border border-black  w-fit py-[0.2dvw] px-[0.2dvw] max-[698px]:w-[74dvw] max-[698px]:fixed max-[698px]:right-0 max-[698px]:top-0 max-[698px]:h-[100dvh] max-[698px]:rounded-none max-[698px]:border-0 max-[698px]:bg-black max-[698px]:flex-col max-[698px]:justify-end max-[698px]:pb-[calc(1.8dvw+18px)] max-[442px]:w-[95dvw] max-[698px]:hidden max-[698px]:z-40"
+                id="Menu">
+                <li class="block"> <a href="#AboutUS"
+                        class="block MenuLink capitalize text-black bg-white text-[max(18px,1dvw)] border border-transparent  justify-center w-fit rounded-full py-[calc(0.1dvw+4px)] px-[calc(0.8dvw+4px)] hover:border-black focus:border-black max-[698px]:bg-transparent max-[698px]:text-white max-[698px]:text-[max(42px,3dvw)] max-[442px]:text-[max(34px,2.2dvw)]">
+                        About Us
+                    </a>
+                </li>
+                <li class="block"> <a href="#OurService"
+                        class="block MenuLink capitalize text-black bg-white text-[max(18px,1dvw)] border border-transparent  justify-center w-fit rounded-full py-[calc(0.1dvw+4px)] px-[calc(0.8dvw+4px)] hover:border-black focus:border-black max-[698px]:bg-transparent max-[698px]:text-white max-[698px]:text-[max(42px,3dvw)] max-[442px]:text-[max(34px,2.2dvw)]">
+                        our service
+                    </a>
+                </li>
+                <li class="block"> <a href="#ContactUS"
+                        class="block MenuLink capitalize text-black bg-white text-[max(18px,1dvw)] border border-transparent  justify-center w-fit rounded-full py-[calc(0.1dvw+4px)] px-[calc(0.8dvw+4px)] hover:border-black focus:border-black max-[698px]:bg-transparent max-[698px]:text-white max-[698px]:text-[max(42px,3dvw)] max-[442px]:text-[max(34px,2.2dvw)]">
+                        Contact Us
+                    </a>
+                </li>
+                <div class="hidden max-[698px]:block absolute  max-[698px]:right-[calc(0.6dvw+16px)] max-[698px]:top-[calc(0.6dvw+16px)]"
+                    id="MenuClose">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M18.3358 20.0962C17.6337 19.602 16.9606 19.0677 16.3198 18.4962C15.6637 17.9522 15.0557 17.3282 14.4317 16.7522C13.8077 16.1762 13.2317 15.5042 12.6557 14.8802C12.0811 14.2197 11.5468 13.5251 11.0557 12.8002C10.8696 12.5257 10.7988 12.1889 10.8586 11.8627C10.9185 11.5364 11.1042 11.2468 11.3757 11.0562C11.5847 10.9186 11.8295 10.8452 12.0797 10.8452C12.33 10.8452 12.5747 10.9186 12.7837 11.0562C13.4882 11.5541 14.1665 12.0882 14.8157 12.6562C15.4557 13.2322 16.0798 13.8242 16.6878 14.4322C17.2638 15.0562 17.8878 15.6482 18.4478 16.3042C19.0158 16.9535 19.5498 17.6317 20.0478 18.3362C20.1431 18.4682 20.2114 18.618 20.2486 18.7765C20.2858 18.9352 20.2911 19.0996 20.2644 19.2604C20.2377 19.421 20.1793 19.5748 20.0926 19.7128C20.006 19.8508 19.8929 19.9703 19.7598 20.0642C19.5522 20.21 19.3062 20.2909 19.0526 20.2965C18.7991 20.3023 18.5495 20.2325 18.3358 20.0962Z"
+                            fill="white" />
+                        <path
+                            d="M11.0557 11.2002C11.5517 10.4962 12.1117 9.84022 12.6557 9.18422C13.1997 8.52822 13.8557 8.00022 14.3997 7.28022C14.9437 6.56022 15.6317 6.09622 16.2718 5.52022C16.921 4.95221 17.5993 4.41816 18.3038 3.92022C18.5436 3.7629 18.8303 3.69302 19.1158 3.72237C19.4012 3.75173 19.6678 3.8785 19.8706 4.08136C20.0734 4.28422 20.2002 4.55078 20.2295 4.83616C20.259 5.12155 20.189 5.40832 20.0318 5.64822C19.542 6.3588 19.0076 7.0375 18.4318 7.68022C17.8398 8.32022 17.2638 8.94422 16.6558 9.55222C16.0478 10.1602 15.4237 10.7522 14.7677 11.3122C14.1117 11.8722 13.4557 12.4322 12.7517 12.9122C12.4816 13.0991 12.1487 13.172 11.8253 13.1151C11.5018 13.0582 11.2138 12.8761 11.0237 12.6082C10.8845 12.3984 10.813 12.1509 10.8187 11.8992C10.8244 11.6475 10.9071 11.4035 11.0557 11.2002Z"
+                            fill="white" />
+                        <path
+                            d="M5.66417 3.90413C6.36628 4.39838 7.03939 4.93259 7.68017 5.50413C8.33617 6.04813 8.94417 6.67213 9.56817 7.24813C10.1922 7.82413 10.7682 8.49613 11.3442 9.12013C11.9188 9.78066 12.4531 10.4752 12.9442 11.2001C13.1303 11.4747 13.2011 11.8114 13.1413 12.1376C13.0814 12.4639 12.8957 12.7536 12.6242 12.9441C12.4152 13.0818 12.1704 13.1551 11.9202 13.1551C11.6699 13.1551 11.4252 13.0818 11.2162 12.9441C10.5117 12.4462 9.83345 11.9121 9.18417 11.3441C8.54417 10.7468 7.92017 10.1655 7.31217 9.60013C6.73617 8.97613 6.11217 8.38413 5.55217 7.72813C4.98414 7.07883 4.45009 6.40059 3.95217 5.69613C3.85675 5.56406 3.78846 5.4144 3.75128 5.25578C3.71408 5.09715 3.70873 4.93272 3.73552 4.77202C3.7623 4.61131 3.82068 4.4575 3.90731 4.31952C3.99393 4.18154 4.10707 4.0621 4.24017 3.96813C4.44443 3.81747 4.68888 3.73096 4.94243 3.71955C5.196 3.70816 5.44721 3.7724 5.66417 3.90413Z"
+                            fill="white" />
+                        <path
+                            d="M12.9445 12.7999C12.4485 13.5039 11.8885 14.1599 11.3445 14.8159C10.8005 15.4719 10.1605 16.0639 9.58445 16.7039C9.00845 17.3439 8.35245 17.8879 7.71245 18.4639C7.06317 19.0319 6.38491 19.566 5.68045 20.0639C5.44055 20.2212 5.15376 20.2911 4.86839 20.2618C4.58299 20.2324 4.31643 20.1056 4.11357 19.9028C3.91071 19.6999 3.78394 19.4333 3.75459 19.1479C3.72525 18.8626 3.79512 18.5757 3.95245 18.3359C4.44216 17.6253 4.97656 16.9466 5.55245 16.3039C6.14445 15.6639 6.72045 15.0399 7.32845 14.4319C7.93645 13.8239 8.56045 13.2319 9.21645 12.6719C9.87245 12.1119 10.5285 11.5519 11.2325 11.0719C11.5025 10.885 11.8354 10.8121 12.1589 10.869C12.4824 10.9259 12.7704 11.108 12.9605 11.3759C13.1055 11.5857 13.1819 11.8354 13.179 12.0904C13.1762 12.3455 13.0942 12.5934 12.9445 12.7999Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </ul>
+            <div class="max-[698px]:block hidden" id="MenuOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="52" height="52">
+                    <path
+                        d="M18 15H10a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2zM18 19H10a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2zM18 11H10a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2zM23 15H21a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2zM23 19H21a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2zM21 13h2a1 1 0 0 0 0-2H21a1 1 0 0 0 0 2z"
+                        fill="#000000"></path>
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="w-full px-[1.2dvw]">
+        <div class=" w-full block   border-b-[0.2dvw] capitalize border-black border-opacity-90 mt-[calc(0.6dvw)]">
+        </div>
+        <div class="flex items-start justify-between w-full mt-[calc(0.4dvw+16px)] max-[768px]:flex-col">
+            <div class="flex items-start max-[410px]:justify-between max-[410px]:w-full ">
+                <div
+                    class="flex flex-col gap-[calc(0.2dvw+2px)] mr-[calc(8dvw+28px)] max-[934px]:mr-[calc(4dvw+18px)] max-[768px]:mr-[calc(10dvw+32px)] max-[410px]:mr-0">
+                    <p class="text-[max(18px,1dvw)]">Rajkot, Gujarat</p>
+                    <p class="text-[max(18px,1dvw)] flex items-center">
+                        <span class="flex items-center capitalize gap-[calc(0.2dvw+4px)] mr-[calc(0.6dvw+8px)]">
+                            Local Time
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-[calc(1.5dvw-6px)] h-[calc(1.5dvw-6px)]"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M4.16669 10H15.8334" stroke="black" stroke-width="1.25" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10 4.16675L15.8333 10.0001L10 15.8334" stroke="black" stroke-width="1.25"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span id="currentTime">10:36:45 AM </span>
+                    </p>
+                    <a href="#" class="text-[max(18px,1dvw)]">open google map</a>
+                </div>
+                <div class="flex flex-col gap-[calc(0.2dvw+2px)]">
+                    <p class="text-[max(18px,1dvw)] capitalize" id="currentDay">friday</p>
+                    <p class="text-[max(18px,1dvw)] capitalize" id="currentDate">July 21, 2023</p>
+                </div>
+            </div>
+            <div class="max-[768px]:w-fit max-[768px]:ml-auto max-[768px]:mt-[calc(1.3dvw+18px)]">
+                <p
+                    class="indent-[6dvw] text-[max(18px,1dvw)] max-w-[42dvw] max-[768px]:max-w-[86dvw] max-[410px]:max-w-[96dvw] max-[768px]:w-fit mb-[0.8dvw] max-[440px]:mb-[4dvw] max-[810px]:text-[max(16px,1dvw)] max-[768px]:text-end">
+                    mattis enim ut
+                    tellus elementum
+                    sagittis vitae et leo
+                    duis ut diam quam nulla
+                    porttitor
+                    massa id
+                    neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla
+                    malesuada
+                    pellentesque elit eget gravida cum</p>
+                <a href="#ContactUS"
+                    class="capitalize text-white bg-black bg-opacity-90 text-[max(18px,1dvw)] max-[768px]:ml-auto max-[810px]:text-[max(16px,1dvw)] border border-transparent flex items-center justify-center w-fit rounded-full py-[calc(0.1dvw+4px)] px-[calc(0.8dvw+4px)] hover:border-black hover:bg-transparent hover:text-black  group transition">
+                    <div
+                        class="mr-[0.8dvw] w-[0.8dvw] h-[0.8dvw] max-[410px]:w-[2dvw] max-[410px]:h-[2dvw] max-[410px]:mr-[2dvw] rounded-full bg-white group-hover:bg-black">
+                    </div>
+                    Contact
+                    Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="w-full px-[1.2dvw]  my-[calc(9dvw+92px)]" id="OurService">
+        <h1
+            class="font1 w-full block capitalize  border-b-[0.2dvw] border-black border-opacity-90 text-[max(72px,4dvw)] max-[1084px]:text-[max(64px,3.2dvw)] pb-[calc(1.6dvw+0.5dvh)] max-[1084px]:pb-[calc(1.2dvw+0.4dvh)] max-[864px]:text-[max(56px,3.9dvw)] max-[576px]:text-[max(42px,2.9dvw)] max-[410px]:text-[max(36px,2.2dvw)]">
+            our services
+        </h1>
+        <div
+            class="grid grid-cols-2 max-[686px]:grid-cols-1 gap-[calc(2dvw+24px)] mt-[calc(0.6dvw+16px)] max-[810px]:gap-[calc(1dvw+12px)] max-[686px]:gap-[calc(1dvh)]">
+            <div>
+                <p
+                    class="indent-[6dvw] text-[max(18px,1dvw)] max-[810px]:text-[max(16px,1dvw)] max-[810px]:indent-[4dvw]">
+                    mattis enim ut tellus elementum sagittis vitae et leo
+                    duis ut diam quam nulla
+                    porttitor
+                    massa id
+                    neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada
+                    pellentesque elit eget gravida cum</p>
+            </div>
+            <div>
+                <p
+                    class="indent-[6dvw] text-[max(18px,1dvw)] max-[810px]:text-[max(16px,1dvw)] max-[810px]:indent-[4dvw]">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis, cupiditate saepe! Placeat vitae voluptas laudantium, iusto ipsam natus dolorem praesentium
+                    unde facere mollitia dolores itaque laboriosam eaque quos pariatur, molestias omnis nesciunt.</p>
+                <p
+                    class="indent-[6dvw] text-[max(18px,1dvw)] mt-[calc(1dvh)] max-[810px]:text-[max(16px,1dvw)] max-[810px]:indent-[4dvw]">
+                    imperdiet sed euismod nisi porta lorem
+                    mollis aliquam ut
+                    porttitor leo a diam sollicitudin tempor id eu nisl</p>
+            </div>
+        </div>
+        <ul class="flex flex-col w-full mt-[calc(4dvw+24px)]">
+            <li class="py-[calc(0.8dvw+6px)] px-[calc(0.6dvw+6px)] border-y-[0.1dvw] border-black border-opacity-90 ">
+                <div class="flex w-full justify-between items-center  service-row cursor-pointer service-show">
+                    <h6 class="font-bold text-[max(18px,1.5dvw)] capitalize tracking-[0.2dvw]">All Type Card Work</h6>
+                    <div
+                        class="w-[calc(1dvw)] h-[calc(1dvw)] max-[726px]:w-[2dvw] max-[726px]:h-[2dvw] max-[529px]:w-[3dvw] max-[529px]:h-[3dvw] rounded-full border-[0.1dvw] border-black border-opacity-90 dot ">
+                    </div>
+                </div>
+                <div
+                    class=" grid grid-cols-2 max-[1024px]:grid-cols-3 max-[626px]:grid-cols-1  gap-[calc(2dvw+24px)] max-[698px]:gap-[calc(1dvw+2px)] max-[626px]:gap-[calc(1dvw+18px)] mt-[calc(1.2dvw+24px)] mb-[calc(0.8dvw+18px)] service-content">
+                    <div>
+                        <ul
+                            class="flex flex-col items-start gap-[calc(0.2dvw+2px)] max-[626px]:flex-row max-[626px]:gap-[calc(1dvw+12px)] max-[626px]:flex-wrap">
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                Aadhar card work
+                            </li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                Pan Card Work
+                            </li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                Election card work
+                            </li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                Passport work
+                            </li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                All work of farmers
+                            </li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                All works of R.T.O
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="max-[1024px]:col-span-2">
+                        <p class="indent-[6dvw] text-[max(18px,1dvw)] max-[810px]:text-[max(16px,1dvw)]">Lorem ipsum
+                            dolor sit amet consectetur
+                            adipisicing elit.
+                            Omnis, cupiditate saepe! Placeat vitae voluptas laudantium, iusto ipsam natus dolorem
+                            praesentium
+                            unde facere mollitia dolores itaque laboriosam eaque quos pariatur, molestias omnis
+                            nesciunt.</p>
+                        <p
+                            class="indent-[6dvw] text-[max(18px,1dvw)] mt-[calc(1dvh)] max-[810px]:text-[max(16px,1dvw)]">
+                            imperdiet sed euismod nisi porta
+                            lorem
+                            mollis aliquam ut
+                            porttitor leo a diam sollicitudin tempor id eu nisl</p>
+                    </div>
+                </div>
+            </li>
+            <li class="py-[calc(0.8dvw+6px)] px-[calc(0.6dvw+6px)] border-b-[0.1dvw] border-black border-opacity-90">
+                <div class="flex w-full justify-between items-center  service-row cursor-pointer">
+                    <h6 class="font-bold text-[max(18px,1.5dvw)] capitalize tracking-[0.2dvw]">Tools from us</h6>
+                    <div
+                        class="w-[calc(1dvw)] h-[calc(1dvw)] max-[726px]:w-[2dvw] max-[726px]:h-[2dvw] max-[529px]:w-[3dvw] max-[529px]:h-[3dvw] rounded-full border-[0.1dvw] border-black border-opacity-90 dot">
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-2 max-[1024px]:grid-cols-3 max-[626px]:grid-cols-1  gap-[calc(2dvw+24px)] max-[698px]:gap-[calc(1dvw+2px)] max-[626px]:gap-[calc(1dvw+18px)] mt-[calc(1.2dvw+24px)] mb-[calc(0.8dvw+18px)] service-content hidden">
+                    <div>
+                        <ul
+                            class="flex flex-col items-start gap-[calc(0.2dvw+2px)] max-[626px]:flex-row max-[626px]:gap-[calc(1dvw+12px)] max-[626px]:flex-wrap">
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                leptop</li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                Camera</li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                Color printer</li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                smart card machine</li>
+                        </ul>
+                    </div>
+                    <div class="max-[1024px]:col-span-2">
+                        <p class="indent-[6dvw] text-[max(18px,1dvw)] max-[810px]:text-[max(16px,1dvw)]">Lorem ipsum
+                            dolor sit amet consectetur
+                            adipisicing elit.
+                            Omnis, cupiditate saepe! Placeat vitae voluptas laudantium, iusto ipsam natus dolorem
+                            praesentium
+                            unde facere mollitia dolores itaque laboriosam eaque quos pariatur, molestias omnis
+                            nesciunt.</p>
+                        <p
+                            class="indent-[6dvw] text-[max(18px,1dvw)] mt-[calc(1dvh)] max-[810px]:text-[max(16px,1dvw)]">
+                            imperdiet sed euismod nisi porta
+                            lorem
+                            mollis aliquam ut
+                            porttitor leo a diam sollicitudin tempor id eu nisl</p>
+                    </div>
+                </div>
+            </li>
+            <li class="py-[calc(0.8dvw+6px)] px-[calc(0.6dvw+6px)] border-b-[0.1dvw] border-black border-opacity-90">
+                <div class="flex w-full justify-between items-center  service-row cursor-pointer">
+                    <h6 class="font-bold text-[max(18px,1.5dvw)] capitalize tracking-[0.2dvw]">Other Services</h6>
+                    <div
+                        class="w-[calc(1dvw)] h-[calc(1dvw)] max-[726px]:w-[2dvw] max-[726px]:h-[2dvw] max-[529px]:w-[3dvw] max-[529px]:h-[3dvw] rounded-full border-[0.1dvw] border-black border-opacity-90 dot">
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-2 max-[1024px]:grid-cols-3 max-[626px]:grid-cols-1  gap-[calc(2dvw+24px)] max-[698px]:gap-[calc(1dvw+2px)] max-[626px]:gap-[calc(1dvw+18px)] mt-[calc(1.2dvw+24px)] mb-[calc(0.8dvw+18px)] service-content hidden">
+                    <div>
+                        <ul
+                            class="flex flex-col items-start gap-[calc(0.2dvw+2px)] max-[626px]:flex-row max-[626px]:gap-[calc(1dvw+12px)] max-[626px]:flex-wrap">
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                service no one</li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                service no two</li>
+                            <li
+                                class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] max-[626px]:border max-[626px]:border-black max-[626px]:rounded max-[626px]:px-[1.8dvw] max-[626px]:py-[0.3dvw]">
+                                service no three</li>
+                        </ul>
+                    </div>
+                    <div class="max-[1024px]:col-span-2">
+                        <p class="indent-[6dvw] text-[max(18px,1dvw)] max-[810px]:text-[max(16px,1dvw)]">Lorem ipsum
+                            dolor sit amet consectetur
+                            adipisicing elit.
+                            Omnis, cupiditate saepe! Placeat vitae voluptas laudantium, iusto ipsam natus dolorem
+                            praesentium
+                            unde facere mollitia dolores itaque laboriosam eaque quos pariatur, molestias omnis
+                            nesciunt.</p>
+                        <p
+                            class="indent-[6dvw] text-[max(18px,1dvw)] mt-[calc(1dvh)] max-[810px]:text-[max(16px,1dvw)]">
+                            imperdiet sed euismod nisi porta
+                            lorem
+                            mollis aliquam ut
+                            porttitor leo a diam sollicitudin tempor id eu nisl</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+
+    <section class="w-full px-[1.2dvw]  my-[calc(9dvw+92px)]" id="AboutUS">
+        <div class="grid grid-cols-2  min-[896px]:gap-[calc(2dvw+24px)]">
+            <div class="mt-[calc(2.5dvw+80px)]">
+                <div class="flex items-start flex-col max-[708px]:flex-col-reverse">
+                    <p
+                        class="indent-[6dvw] max-[858px]:indent-[4dvw] text-[max(18px,1dvw)] max-[858px]:text-[max(16px,0.8dvw)] max-w-[42dvw] max-[858px]:max-w-[86dvw] mb-[calc(18dvw+46px)] max-[1084px]:mb-[calc(11dvw+32px)] max-[708px]:mb-0  max-[708px]:mt-[calc(6dvw+18px)] max-[708px]:w-[80dvw] max-[398px]:w-[100dvw]  max-[476px]:w-[94dvw] max-[476px]:mt-[calc(4dvw+12px)]">
+                        mattis enim ut
+                        tellus elementum
+                        sagittis vitae et leo
+                        duis ut diam quam nulla
+                        porttitor
+                        massa id
+                        neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla
+                        malesuada
+                        pellentesque elit eget gravida cum</p>
+                    <div
+                        class="relative overflow-hidden rounded pt-[25dvw] w-[22dvw] mr-auto ml-[3dvw] max-[708px]:mt-[calc(19dvw+64px)] max-[476px]:mt-[calc(12dvw+42px)] max-[708px]:w-[34dvw] max-[708px]:pt-[38dvw] max-[398px]:pt-[43dvw] max-[398px]:w-[39dvw]">
+                        <img src="https://images.unsplash.com/photo-1532153955177-f59af40d6472?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                            class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div
+                    class="relative overflow-hidden rounded pt-[45dvw] w-[40dvw] max-[708px]:pt-[60dvw] max-[708px]:w-full ml-auto max-[476px]:pt-[58dvw]">
+                    <img src="https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=704&q=80"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="w-full px-[1.2dvw]  my-[calc(9dvw+92px)]" id="ContactUS">
+        <h1
+            class="font1 w-full block capitalize  border-b-[0.2dvw] border-black border-opacity-90 text-[max(72px,4dvw)] max-[1084px]:text-[max(64px,3.2dvw)] pb-[calc(1.6dvw+0.5dvh)] max-[1084px]:pb-[calc(1.2dvw+0.4dvh)] max-[864px]:text-[max(56px,3.9dvw)] max-[576px]:text-[max(42px,2.9dvw)] max-[410px]:text-[max(34px,1.9dvw)]">
+            Come
+            And say hello
+        </h1>
+        <div
+            class="flex items-start min-[1084px]:justify-between min-[1300px]:w-[calc(100%-24dvh)] w-[calc(100%-12dvh)]  mt-[calc(0.6dvw+16px)] max-[1084px]:w-full max-[1084px]:gap-[calc(5.8dvw+32px)] max-[864px]:gap-[calc(2.2dvw+15px)] max-[864px]:flex-col">
+            <div class="flex items-start max-[456px]:flex-col">
+                <h4
+                    class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] mb-[calc(1dvw+2px)] min-[1300px]:mr-[calc(6dvw+24px)] mr-[calc(4dvw+16px)] max-[1084px]:mr-[calc(2dvw+12px)]">
+                    Shop open time
+                </h4>
+                <div class="flex flex-col items-start gap-[calc(0.2dvw+0.2dvh)]">
+                    <p href="#" class="text-black flex items-center  text-[max(16px,1dvw)]"><span
+                            class="flex items-center gap-[0.6dvw] mr-[calc(0.2dvw+8px)] min-w-[7.2dvw] font-bold"> Mon
+                            to Sat
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-[calc(1.5dvw-6px)] h-[calc(1.5dvw-6px)] max-[532px]:w-[calc(2dvw+12px)] max-[532px]:h-[calc(2dvw+12px)]"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M4.16669 10H15.8334" stroke="black" stroke-width="1.25" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10 4.16675L15.8333 10.0001L10 15.8334" stroke="black" stroke-width="1.25"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                        09:30AM To 09:00 PM</p>
+                    <p href="#" class="text-black flex items-center  text-[max(16px,1dvw)]"><span
+                            class="flex items-center gap-[0.6dvw] mr-[calc(0.2dvw+8px)] min-w-[7.2dvw] font-bold"> Sun
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-[calc(1.5dvw-6px)] h-[calc(1.5dvw-6px)] max-[532px]:w-[calc(2dvw+12px)] max-[532px]:h-[calc(2dvw+12px)]"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M4.16669 10H15.8334" stroke="black" stroke-width="1.25" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10 4.16675L15.8333 10.0001L10 15.8334" stroke="black" stroke-width="1.25"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                        09:30AM To 12:30 PM</p>
+                </div>
+            </div>
+            <div
+                class="flex items-start max-[864px]:w-fit max-[864px]:ml-auto max-[456px]:flex-col max-[456px]:items-end">
+                <h4
+                    class="text-black font-bold capitalize text-[max(18px,1.2dvw)] tracking-[0.01dvw] mb-[calc(1dvw+2px)] min-[1300px]:mr-[calc(6dvw+24px)] mr-[calc(4dvw+16px)] max-[1084px]:mr-[calc(2dvw+12px)] max-[456px]:mr-0">
+                    address
+                </h4>
+                <div class="flex flex-col items-start gap-[calc(0.2dvw+0.2dvh)]">
+                    <p href="#"
+                        class="text-black flex items-center  text-[max(16px,1dvw)] max-w-[18dvw] max-[1280px]:max-w-[24dvw] max-[864px]:max-w-[32dvw] max-[620px]:max-w-[54dvw] max-[456px]:text-end max-[410px]:max-w-[72dvw]">
+                        4, Labhdeep Main Rd, near Sahajanand
+                        Restaurant, Mavdi, Rajkot, Gujarat 360004</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="w-full px-[1.2dvw]  mt-[calc(9dvw+92px)] mb-[calc(1dvw+1dvh)]">
+        <div
+            class="w-full min-[1300px]:px-[calc(2vw+24px)] px-[calc(1.5vw+12px)] min-[1300px]:py-[calc(1vw+26px)] py-[calc(1vw+24px)] max-[532px]:py-[calc(0.8vw+18px)] bg-black bg-opacity-90 rounded-[calc(0.5vw+8px)]">
+            <div
+                class="grid max-[1280px]:grid-cols-3 grid-cols-2 max-[700px]:grid-cols-1 min-[1300px]:gap-[calc(2dvw+24px)] items-start max-[700px]:items-center">
+                <div class="">
+                    <h1
+                        class="font1 text-white  capitalize  text-[max(72px,4dvw)] max-[1084px]:text-[max(64px,3.2dvw)] max-[864px]:text-[max(56px,3.9dvw)] max-[576px]:text-[max(42px,2.9dvw)] max-[410px]:text-[max(36px,2.2dvw)]">
+                        Sam
+                    </h1>
+                </div>
+                <div
+                    class="w-full flex  min-[1090px]:gap-[calc(1vw+24px)] gap-[calc(0.8vw+12px)] max-[1280px]:col-span-2 max-[700px]:mt-[calc(3dvw+24px)]  max-[532px]:flex-col">
+                    <div
+                        class="flex flex-col items-start min-[1300px]:min-w-[calc(6vw+200px)] min-[930px]:min-w-[calc(6vw+250px)] min-[700px]:min-w-[calc(4vw+175px)] max-[700px]:min-w-[50%]">
+                        <h4 class="text-white uppercase text-[max(16px,1dvw)] tracking-[0.2dvw] mb-[calc(1dvw+2px)]">
+                            contact
+                        </h4>
+                        <div class="flex flex-col items-start gap-[calc(0.2dvw+0.2dvh)]">
+                            <a href="mailto:dhartizerox1@gmail.com"
+                                class="text-white  text-[max(16px,1dvw)]">smaInfoteck@gmail.com</a>
+                            <a href="tel:+8488000074" class="text-white  text-[max(16px,1dvw)]">123456789</a>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col items-start min-[1300px]:min-w-[calc(6vw+200px)] min-[930px]:min-w-[calc(6vw+250px)] min-[700px]:min-w-[calc(4vw+175px)] max-[700px]:min-w-[50%] max-[532px]:w-fit max-[532px]:ml-auto max-[532px]:items-end">
+                        <h4 class="text-white uppercase text-[max(16px,1dvw)] tracking-[0.2dvw] mb-[calc(1dvw+2px)]">
+                            shop timeing
+                        </h4>
+                        <div class="flex flex-col items-start gap-[calc(0.2dvw+0.2dvh)] max-[532px]:items-end">
+                            <p href="#" class="text-white flex items-center  text-[max(16px,1dvw)] w-max"><span
+                                    class="flex items-center gap-[0.6dvw] mr-[calc(0.2dvw+8px)] min-[1140px]:min-w-[7.2dvw]">
+                                    Mon
+                                    to Sat
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="w-[calc(1.5dvw-6px)] h-[calc(1.5dvw-6px)] max-[532px]:w-[calc(2dvw+12px)] max-[532px]:h-[calc(2dvw+12px)]"
+                                        viewBox="0 0 20 20" fill="none">
+                                        <path d="M4.16669 10H15.8334" stroke="white" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10 4.16675L15.8333 10.0001L10 15.8334" stroke="white"
+                                            stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span>
+                                09:30AM To 09:00 PM</p>
+                            <p href="#" class="text-white flex items-center  text-[max(16px,1dvw)]"><span
+                                    class="flex items-center gap-[0.6dvw] mr-[calc(0.2dvw+8px)] min-[1140px]:min-w-[7.2dvw]">
+                                    Sun
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="w-[calc(1.5dvw-6px)] h-[calc(1.5dvw-6px)] max-[532px]:w-[calc(2dvw+12px)] max-[532px]:h-[calc(2dvw+12px)]"
+                                        viewBox="0 0 20 20" fill="none">
+                                        <path d="M4.16669 10H15.8334" stroke="white" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10 4.16675L15.8333 10.0001L10 15.8334" stroke="white"
+                                            stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span>
+                                09:30AM To 12:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="grid max-[1280px]:grid-cols-3 grid-cols-2 max-[700px]:grid-cols-1 items-end max-[700px]:items-center min-[1300px]:gap-[calc(2dvw+24px)] mt-[calc(3dvw+120px)] max-[532px]:mt-[calc(1.5dvw+16px)]">
+                <div class="max-[700px]:order-last">
+                    <h2 class="text-white font-normal  text-[max(16px,1dvw)] max-[700px]:w-fit max-[700px]:mx-auto">©
+                        SAMINFOTECK 2023</h2>
+                </div>
+                <div
+                    class="w-full flex  min-[1090px]:gap-[calc(1vw+24px)] gap-[calc(0.8vw+12px)] max-[1280px]:col-span-2 max-[700px]:mb-[calc(1.5dvw+20px)] max-[532px]:flex-col">
+                    <div
+                        class="flex flex-col items-start min-[1300px]:min-w-[calc(6vw+200px)] min-[930px]:min-w-[calc(6vw+250px)] min-[700px]:min-w-[calc(4vw+175px)] max-[700px]:min-w-[50%]">
+                        <h4 class="text-white uppercase text-[max(16px,1dvw)] tracking-[0.2dvw] mb-[calc(1dvw+2px)]">
+                            social media
+                        </h4>
+                        <div class="flex flex-col items-start gap-[calc(0.2dvw+0.2dvh)]">
+                            <a href="#" class="text-white  text-[max(16px,1dvw)]">Facebook</a>
+                            <a href="#" class="text-white  text-[max(16px,1dvw)]">whatsapp</a>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col items-start min-[1300px]:min-w-[calc(6vw+200px)] min-[930px]:min-w-[calc(6vw+250px)] min-[700px]:min-w-[calc(4vw+175px)] max-[700px]:min-w-[50%] max-[532px]:w-fit max-[532px]:ml-auto max-[532px]:items-end">
+                        <h4 class="text-white uppercase text-[max(16px,1dvw)] tracking-[0.2dvw] mb-[calc(1dvw+2px)]">
+                            address
+                        </h4>
+                        <div
+                            class="flex flex-col items-start gap-[calc(0.2dvw+0.2dvh)] max-[532px]:text-end min-[1088px]:max-w-[17dvw]">
+                            <p href="#" class="text-white  text-[max(16px,1dvw)]">4, Labhdeep Main Rd, near Sahajanand
+                                Restaurant, Mavdi, Rajkot, Gujarat 360004
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="fixed top-0 left-0 bg-white bg-opacity-95 w-full h-full hidden" id="Overlay"></div>
+
+
+
+    <!-- <div id="myModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-40 hidden">
+        <div
+            class="bg-white rounded-lg px-[calc(1dvw+12px)] py-[calc(0.8dvw+12px)] max-w-[calc(25dvw+12px)] max-[1348px]:max-w-[calc(40dvw+12px)] max-[854px]:max-w-[calc(55dvw+12px)] max-[472px]:max-w-[calc(80dvw+12px)] max-[410px]:max-w-[calc(94dvw+12px)] w-full">
+            <p class="font-bold mb-4 font1 text-[max(32px,2dvw)]">Shop is Closed</p>
+            <p class="text-[max(16px,1dvw)]">Our shop is currently closed. Please visit during Our working hours from
+                09:30 AM to
+                09:00 PM.</p>
+            <button
+                class="mt-[calc(0.8dvw+10px)] px-[calc(0.8dvw+8px)] py-[calc(0.4dvw+5px)] bg-black text-white rounded hover:bg-transparent hover:border-black hover:text-black border border-transparent bg-opacity-90 text-[max(12px,0.8dvw)]"
+                onclick="hideModal()">OK</button>
+        </div>
+    </div> -->
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
