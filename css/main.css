@@ -141,3 +141,20 @@ a:focus {
         -o-transform: none;
     }
 }
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .cursor-pointer {
+        cursor: none !important;
+    }
+
+    a {
+        cursor: none !important;
+    }
+}
